@@ -3,7 +3,7 @@
     <div id="orientationPortrait">
       <v-img class="titleLogoImgPortrait" src="@/assets/img/titleLogo.png" aspect-ratio="1.4"></v-img>
       <div class="cautionText">
-        <h2>画面を横にしてください！</h2>
+        <h2 class="cautionTextH2">画面を横にしてください！</h2>
       </div>
     </div>
     <div id="orientationLandscape">
@@ -68,7 +68,7 @@ export default {
       font-weight: bold;
       font-size: 15px;
     }
-    h2 {
+    .cautionTextH2 {
       padding: 1rem 2rem;
       position: relative;
       color: #ffffff;
@@ -99,7 +99,7 @@ export default {
       width: 40vw;
       top: calc(50% - 30vw/2);
       left: calc(25% - 40vw/2);
-      animation: poyooon 0.9s linear 0s 1;
+      animation: poyooon 0.9s linear 0s infinite;
     }
     .titleLogoImg {
       position: absolute;
