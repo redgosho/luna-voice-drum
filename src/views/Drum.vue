@@ -5,9 +5,11 @@
   >
     <v-img class="ebiImg" src="@/assets/img/LunaEbi.jpg" aspect-ratio="1.4"></v-img>
     <div class="toHomeButton">
-      <v-btn color="#FFFFFF" outlined dark large>
-        <v-icon>mdi-arrow-left-bold</v-icon>
-      </v-btn>
+      <router-link to="/">
+        <v-btn color="#FFFFFF" outlined dark large>
+          <v-icon>mdi-arrow-left-bold</v-icon>
+        </v-btn>
+      </router-link>
     </div>
     <div class="drum bass">
       <v-btn color="success"
@@ -178,6 +180,10 @@ export default {
     // background: red;
     left: 5px;
     top: 5px;
+  }
+  a {
+    // color: white;
+    text-decoration: none;
   }
   .drum {
     position: absolute;
