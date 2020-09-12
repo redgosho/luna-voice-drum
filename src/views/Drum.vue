@@ -11,8 +11,8 @@
     <div class="drum bass">
       <v-btn color="success"
         fab x-large dark
-        height="280"
-        width="280"
+        :height="drumSize.bass"
+        :width="drumSize.bass"
         @click="playSound(decision3)"
       >
         <v-icon>mdi-domain</v-icon>
@@ -21,8 +21,8 @@
     <div class="drum snare1">
       <v-btn color="success"
         fab x-large dark
-        height="200"
-        width="200"
+        :height="drumSize.snare"
+        :width="drumSize.snare"
         @click="playSound(decision3)"
       >
         <v-icon>mdi-domain</v-icon>
@@ -31,8 +31,8 @@
     <div class="drum snare2">
       <v-btn color="success"
         fab x-large dark
-        height="200"
-        width="200"
+        :height="drumSize.snare"
+        :width="drumSize.snare"
         @click="playSound(decision3)"
       >
         <v-icon>mdi-domain</v-icon>
@@ -41,8 +41,8 @@
     <div class="drum snare3">
       <v-btn color="success"
         fab x-large dark
-        height="200"
-        width="200"
+        :height="drumSize.snare"
+        :width="drumSize.snare"
         @click="playSound(decision3)"
       >
         <v-icon>mdi-domain</v-icon>
@@ -51,8 +51,8 @@
     <div class="drum snare4">
       <v-btn color="success"
         fab x-large dark
-        height="200"
-        width="200"
+        :height="drumSize.snare"
+        :width="drumSize.snare"
         @click="playSound(decision3)"
       >
         <v-icon>mdi-domain</v-icon>
@@ -61,8 +61,8 @@
     <div class="drum cymbal1">
       <v-btn color="success"
         fab x-large dark
-        height="150"
-        width="150"
+        :height="drumSize.cymbal"
+        :width="drumSize.cymbal"
         @click="playSound(decision3)"
       >
         <v-icon>mdi-domain</v-icon>
@@ -71,8 +71,8 @@
     <div class="drum cymbal2">
       <v-btn color="success"
         fab x-large dark
-        height="150"
-        width="150"
+        :height="drumSize.cymbal"
+        :width="drumSize.cymbal"
         @click="playSound(decision3)"
       >
         <v-icon>mdi-domain</v-icon>
@@ -81,8 +81,8 @@
     <div class="drum cymbal3">
       <v-btn color="success"
         fab x-large dark
-        height="150"
-        width="150"
+        :height="drumSize.cymbal"
+        :width="drumSize.cymbal"
         @click="playSound(decision3)"
       >
         <v-icon>mdi-domain</v-icon>
@@ -91,8 +91,8 @@
     <div class="drum cymbal4">
       <v-btn color="success"
         fab x-large dark
-        height="150"
-        width="150"
+        :height="drumSize.cymbal"
+        :width="drumSize.cymbal"
         @click="playSound(decision3)"
       >
         <v-icon>mdi-domain</v-icon>
@@ -106,11 +106,27 @@ import decision18 from '@/assets/sounds/decision18.mp3'
 export default {
   data () {
     return {
+      drumSize: {
+        bass: null,
+        snare: null,
+        cymbal: null
+      },
       decision3: decision3,
       decision18: decision18
     }
   },
+  mounted () {
+    this.sizeInit()
+    console.log('this.drumSize:', this.drumSize)
+  },
   methods: {
+    sizeInit () {
+      const width = window.innerWidth
+      console.log('width:', width)
+      this.drumSize.bass = width / 3
+      this.drumSize.snare = width / 4
+      this.drumSize.cymbal = width / 5
+    },
     playSound (soundName) {
       const audio = new Audio(soundName)
       audio.volume = 1
@@ -120,10 +136,10 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-  $bass: "280px";
-  $snare1: "200px";
-  $snare2: "200px";
-  $cymbal1: "150px";
+  $bass: "100vw/3";
+  $snare1: "100vw/4";
+  $snare2: "100vw/4";
+  $cymbal1: "100vw/5";
 
   #fullscreen {
     position: fixed;
