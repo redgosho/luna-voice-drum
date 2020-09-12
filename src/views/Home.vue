@@ -18,7 +18,7 @@
           >
             ENTER
           </v-btn>
-          <p class="versionText">ver:1.0.3</p>
+          <p class="versionText">ver:1.0.4</p>
         </router-link>
       </div>
     </div>
