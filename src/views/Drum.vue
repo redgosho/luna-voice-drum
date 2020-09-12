@@ -4,9 +4,9 @@
     class="text-center drum-area"
   >
     <v-img class="ebiImg" src="@/assets/img/LunaEbi.jpg" aspect-ratio="1.4"></v-img>
-    <div class="my-2">
-      <v-btn color="error" dark large>
-        <v-icon>mdi-arrowLeft-bold</v-icon>
+    <div class="toHomeButton">
+      <v-btn color="#FFFFFF" outlined dark large>
+        <v-icon>mdi-arrow-left-bold</v-icon>
       </v-btn>
     </div>
     <div class="drum bass">
@@ -16,7 +16,7 @@
         :width="drumSize.bass"
         @click="playSound(lunaNn)"
       >
-        <v-icon>mdi-domain</v-icon>
+        <v-icon>mdi-surround-sound</v-icon>
       </v-btn>
     </div>
     <div class="drum snare1">
@@ -26,7 +26,7 @@
         :width="drumSize.snare"
         @click="playSound(lunaTa)"
       >
-        <v-icon>mdi-domain</v-icon>
+        <v-icon>mdi-blur-radial</v-icon>
       </v-btn>
     </div>
     <div class="drum snare2">
@@ -36,7 +36,7 @@
         :width="drumSize.snare"
         @click="playSound(lunaYo)"
       >
-        <v-icon>mdi-domain</v-icon>
+        <v-icon>mdi-blur-radial</v-icon>
       </v-btn>
     </div>
     <div class="drum snare3">
@@ -46,7 +46,7 @@
         :width="drumSize.snare"
         @click="playSound(lunaHai)"
       >
-        <v-icon>mdi-domain</v-icon>
+        <v-icon>mdi-blur-radial</v-icon>
       </v-btn>
     </div>
     <div class="drum snare4">
@@ -56,7 +56,7 @@
         :width="drumSize.snare"
         @click="playSound(lunaExtsu)"
       >
-        <v-icon>mdi-domain</v-icon>
+        <v-icon>mdi-blur-radial</v-icon>
       </v-btn>
     </div>
     <div class="drum cymbal1">
@@ -66,7 +66,7 @@
         :width="drumSize.cymbal"
         @click="playSound(lunaAxtsu)"
       >
-        <v-icon>mdi-domain</v-icon>
+        <v-icon>mdi-album</v-icon>
       </v-btn>
     </div>
     <div class="drum cymbal2">
@@ -76,7 +76,7 @@
         :width="drumSize.cymbal"
         @click="playSound(lunaShaaa)"
       >
-        <v-icon>mdi-domain</v-icon>
+        <v-icon>mdi-album</v-icon>
       </v-btn>
     </div>
     <div class="drum cymbal3">
@@ -86,7 +86,7 @@
         :width="drumSize.cymbal"
         @click="playSound(lunaKatan)"
       >
-        <v-icon>mdi-domain</v-icon>
+        <v-icon>mdi-album</v-icon>
       </v-btn>
     </div>
     <div class="drum cymbal4">
@@ -96,7 +96,7 @@
         :width="drumSize.cymbal"
         @click="playSound(lunaNaaa)"
       >
-        <v-icon>mdi-domain</v-icon>
+        <v-icon>mdi-album</v-icon>
       </v-btn>
     </div>
   </v-container>
@@ -172,6 +172,12 @@ export default {
     width: 30vw;
     top: calc(0% - 30vw/5);
     left: calc(50% - 30vw/2);
+  }
+  .toHomeButton {
+    position: absolute;
+    // background: red;
+    left: 5px;
+    top: 5px;
   }
   .drum {
     position: absolute;
