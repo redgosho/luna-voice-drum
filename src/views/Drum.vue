@@ -142,12 +142,11 @@ export default {
   },
   mounted () {
     this.sizeInit()
-    console.log('this.drumSize:', this.drumSize)
+    // console.log('this.drumSize:', this.drumSize)
   },
   methods: {
     sizeInit () {
       const width = window.innerWidth
-      console.log('width:', width)
       this.drumSize.bass = width / 3
       this.drumSize.snare = width / 4
       this.drumSize.cymbal = width / 5
