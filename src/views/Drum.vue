@@ -3,6 +3,7 @@
     id="fullscreen"
     class="text-center drum-area"
   >
+    <v-img class="ebiImg" src="@/assets/img/LunaEbi.jpg" aspect-ratio="1.4"></v-img>
     <div class="my-2">
       <v-btn color="error" dark large>
         <v-icon>mdi-arrowLeft-bold</v-icon>
@@ -161,11 +162,16 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.233);
+    background: #fe91b0;
   }
   .drum-area {
     // position: relative;
     background: red;
+  }
+  .ebiImg {
+    width: 30vw;
+    top: calc(0% - 30vw/5);
+    left: calc(50% - 30vw/2);
   }
   .drum {
     position: absolute;
