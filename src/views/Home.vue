@@ -9,14 +9,16 @@
     <div id="orientationLandscape">
       <v-img class="ebiImg" src="@/assets/img/LunaEbi.jpg" aspect-ratio="1.4"></v-img>
       <v-img class="titleLogoImg" src="@/assets/img/titleLogo.png" aspect-ratio="1.4"></v-img>
-      <div class="toHomeButton">
+      <div class="toHomeButtonArea">
         <router-link to="/Drum">
           <v-btn color="#FFFFFF" outlined dark large
+            class="toHomeButton"
             width="40vw"
             height="50px"
           >
             ENTER
           </v-btn>
+          <p class="versionText">ver:1.0.2</p>
         </router-link>
       </div>
     </div>
@@ -108,11 +110,19 @@ export default {
       right: calc(25% - 40vw/2);
       animation: poyooon 0.9s linear 0s 1;
     }
-    .toHomeButton {
+    .toHomeButtonArea {
       position: absolute;
-      background: red;
       top: calc(85% - 50px/2);
       right: 5vw;
+    }
+    .toHomeButton{
+      background: red;
+    }
+    .versionText {
+      font-size: 5px;
+      text-align: center;
+      padding-top: 10px;
+      background: transparent;
     }
     a {
       // color: white;
