@@ -13,7 +13,7 @@
         fab x-large dark
         :height="drumSize.bass"
         :width="drumSize.bass"
-        @click="playSound(decision3)"
+        @click="playSound(lunaNn)"
       >
         <v-icon>mdi-domain</v-icon>
       </v-btn>
@@ -23,7 +23,7 @@
         fab x-large dark
         :height="drumSize.snare"
         :width="drumSize.snare"
-        @click="playSound(decision3)"
+        @click="playSound(lunaTa)"
       >
         <v-icon>mdi-domain</v-icon>
       </v-btn>
@@ -33,7 +33,7 @@
         fab x-large dark
         :height="drumSize.snare"
         :width="drumSize.snare"
-        @click="playSound(decision3)"
+        @click="playSound(lunaYo)"
       >
         <v-icon>mdi-domain</v-icon>
       </v-btn>
@@ -43,7 +43,7 @@
         fab x-large dark
         :height="drumSize.snare"
         :width="drumSize.snare"
-        @click="playSound(decision3)"
+        @click="playSound(lunaHai)"
       >
         <v-icon>mdi-domain</v-icon>
       </v-btn>
@@ -53,7 +53,7 @@
         fab x-large dark
         :height="drumSize.snare"
         :width="drumSize.snare"
-        @click="playSound(decision3)"
+        @click="playSound(lunaExtsu)"
       >
         <v-icon>mdi-domain</v-icon>
       </v-btn>
@@ -63,7 +63,7 @@
         fab x-large dark
         :height="drumSize.cymbal"
         :width="drumSize.cymbal"
-        @click="playSound(decision3)"
+        @click="playSound(lunaAxtsu)"
       >
         <v-icon>mdi-domain</v-icon>
       </v-btn>
@@ -73,7 +73,7 @@
         fab x-large dark
         :height="drumSize.cymbal"
         :width="drumSize.cymbal"
-        @click="playSound(decision3)"
+        @click="playSound(lunaShaaa)"
       >
         <v-icon>mdi-domain</v-icon>
       </v-btn>
@@ -83,7 +83,7 @@
         fab x-large dark
         :height="drumSize.cymbal"
         :width="drumSize.cymbal"
-        @click="playSound(decision3)"
+        @click="playSound(lunaKatan)"
       >
         <v-icon>mdi-domain</v-icon>
       </v-btn>
@@ -93,7 +93,7 @@
         fab x-large dark
         :height="drumSize.cymbal"
         :width="drumSize.cymbal"
-        @click="playSound(decision3)"
+        @click="playSound(lunaNaaa)"
       >
         <v-icon>mdi-domain</v-icon>
       </v-btn>
@@ -101,8 +101,15 @@
   </v-container>
 </template>
 <script>
-import decision3 from '@/assets/sounds/decision3.mp3'
-import decision18 from '@/assets/sounds/decision18.mp3'
+import lunaAxtsu from '@/assets/sounds/lunaAxtsu.wav'
+import lunaExtsu from '@/assets/sounds/lunaExtsu.wav'
+import lunaHai from '@/assets/sounds/lunaHai.wav'
+import lunaKatan from '@/assets/sounds/lunaKatan.wav'
+import lunaNaaa from '@/assets/sounds/lunaNaaa.wav'
+import lunaNn from '@/assets/sounds/lunaNn.wav'
+import lunaShaaa from '@/assets/sounds/lunaShaaa.wav'
+import lunaTa from '@/assets/sounds/lunaTa.wav'
+import lunaYo from '@/assets/sounds/lunaYo.wav'
 export default {
   data () {
     return {
@@ -111,8 +118,15 @@ export default {
         snare: null,
         cymbal: null
       },
-      decision3: decision3,
-      decision18: decision18
+      lunaAxtsu: lunaAxtsu,
+      lunaExtsu: lunaExtsu,
+      lunaHai: lunaHai,
+      lunaKatan: lunaKatan,
+      lunaNaaa: lunaNaaa,
+      lunaNn: lunaNn,
+      lunaShaaa: lunaShaaa,
+      lunaTa: lunaTa,
+      lunaYo: lunaYo
     }
   },
   mounted () {
@@ -163,19 +177,19 @@ export default {
   }
   .snare1 {
     bottom: calc(0% - #{$snare1}/3);
-    left: calc(75% - #{$snare1}/2);
-  }
-  .snare2 {
-    bottom: calc(0% - #{$snare1}/3);
     left: calc(25% - #{$snare1}/2);
   }
-  .snare3 {
+  .snare2 {
     bottom: calc(40% - #{$snare1}/3);
     left: calc(38% - #{$snare1}/2);
   }
-  .snare4 {
+  .snare3 {
     bottom: calc(40% - #{$snare1}/3);
     left: calc(62% - #{$snare1}/2);
+  }
+  .snare4 {
+    bottom: calc(0% - #{$snare1}/3);
+    left: calc(75% - #{$snare1}/2);
   }
   .cymbal1 {
     bottom: calc(30% - #{$cymbal1}/3);
