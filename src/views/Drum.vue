@@ -23,7 +23,7 @@
           fab x-large dark
           :height="drumSize.bass"
           :width="drumSize.bass"
-          @click="playSound(lunaNn)"
+          @click="playSound(lunaDoon)"
         >
           <v-icon>mdi-surround-sound</v-icon>
         </v-btn>
@@ -33,7 +33,7 @@
           fab x-large dark
           :height="drumSize.snare"
           :width="drumSize.snare"
-          @click="playSound(lunaTa)"
+          @click="playSound(lunaDon)"
         >
           <v-icon>mdi-blur-radial</v-icon>
         </v-btn>
@@ -43,7 +43,7 @@
           fab x-large dark
           :height="drumSize.snare"
           :width="drumSize.snare"
-          @click="playSound(lunaYo)"
+          @click="playSound(lunaTa)"
         >
           <v-icon>mdi-blur-radial</v-icon>
         </v-btn>
@@ -53,7 +53,7 @@
           fab x-large dark
           :height="drumSize.snare"
           :width="drumSize.snare"
-          @click="playSound(lunaHai)"
+          @click="playSound(lunaPun)"
         >
           <v-icon>mdi-blur-radial</v-icon>
         </v-btn>
@@ -63,7 +63,7 @@
           fab x-large dark
           :height="drumSize.snare"
           :width="drumSize.snare"
-          @click="playSound(lunaExtsu)"
+          @click="playSound(lunaDokan)"
         >
           <v-icon>mdi-blur-radial</v-icon>
         </v-btn>
@@ -73,7 +73,7 @@
           fab x-large dark
           :height="drumSize.cymbal"
           :width="drumSize.cymbal"
-          @click="playSound(lunaAxtsu)"
+          @click="playSound(lunaShaaa)"
         >
           <v-icon>mdi-album</v-icon>
         </v-btn>
@@ -83,7 +83,7 @@
           fab x-large dark
           :height="drumSize.cymbal"
           :width="drumSize.cymbal"
-          @click="playSound(lunaShaaa)"
+          @click="playSound(lunaShuuu)"
         >
           <v-icon>mdi-album</v-icon>
         </v-btn>
@@ -93,7 +93,7 @@
           fab x-large dark
           :height="drumSize.cymbal"
           :width="drumSize.cymbal"
-          @click="playSound(lunaKatan)"
+          @click="playSound(lunaKan)"
         >
           <v-icon>mdi-album</v-icon>
         </v-btn>
@@ -103,7 +103,7 @@
           fab x-large dark
           :height="drumSize.cymbal"
           :width="drumSize.cymbal"
-          @click="playSound(lunaNaaa)"
+          @click="playSound(lunaKatan)"
         >
           <v-icon>mdi-album</v-icon>
         </v-btn>
@@ -112,13 +112,20 @@
   </v-container>
 </template>
 <script>
+import lunaAaa from '@/assets/sounds/lunaAaa.wav'
 import lunaAxtsu from '@/assets/sounds/lunaAxtsu.wav'
+import lunaDokan from '@/assets/sounds/lunaDokan.wav'
+import lunaDon from '@/assets/sounds/lunaDon.wav'
+import lunaDoon from '@/assets/sounds/lunaDoon.wav'
 import lunaExtsu from '@/assets/sounds/lunaExtsu.wav'
 import lunaHai from '@/assets/sounds/lunaHai.wav'
+import lunaKan from '@/assets/sounds/lunaKan.wav'
 import lunaKatan from '@/assets/sounds/lunaKatan.wav'
 import lunaNaaa from '@/assets/sounds/lunaNaaa.wav'
 import lunaNn from '@/assets/sounds/lunaNn.wav'
+import lunaPun from '@/assets/sounds/lunaPun.wav'
 import lunaShaaa from '@/assets/sounds/lunaShaaa.wav'
+import lunaShuuu from '@/assets/sounds/lunaShuuu.wav'
 import lunaTa from '@/assets/sounds/lunaTa.wav'
 import lunaYo from '@/assets/sounds/lunaYo.wav'
 export default {
@@ -129,13 +136,20 @@ export default {
         snare: null,
         cymbal: null
       },
+      lunaAaa: lunaAaa,
       lunaAxtsu: lunaAxtsu,
+      lunaDokan: lunaDokan,
+      lunaDon: lunaDon,
+      lunaDoon: lunaDoon,
       lunaExtsu: lunaExtsu,
       lunaHai: lunaHai,
+      lunaKan: lunaKan,
       lunaKatan: lunaKatan,
       lunaNaaa: lunaNaaa,
       lunaNn: lunaNn,
+      lunaPun: lunaPun,
       lunaShaaa: lunaShaaa,
+      lunaShuuu: lunaShuuu,
       lunaTa: lunaTa,
       lunaYo: lunaYo
     }
